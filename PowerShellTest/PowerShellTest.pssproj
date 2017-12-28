@@ -25,9 +25,12 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="PSMonthOfLaunches\" />
+  </ItemGroup>
   <ItemGroup>
     <Compile Include="ObjectAndObjectTypes.ps1" />
+    <Compile Include="PSMonthOfLaunches\HelpSystem.ps1" />
     <Compile Include="Script.ps1" />
     <Compile Include="TheObjectPipline.ps1" />
   </ItemGroup>
