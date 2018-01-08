@@ -33,6 +33,7 @@
     <Compile Include="PSMonthOfLaunches\AddingCommands.ps1" />
     <Compile Include="PSMonthOfLaunches\ConnectingCommands.ps1" />
     <Compile Include="PSMonthOfLaunches\HelpSystem.ps1" />
+    <Compile Include="PSMonthOfLaunches\IfStatement.ps1" />
     <Compile Include="PSMonthOfLaunches\Objects.ps1" />
     <Compile Include="PSMonthOfLaunches\Pipeline.ps1" />
     <Compile Include="PSMonthOfLaunches\Filtering.ps1" />
