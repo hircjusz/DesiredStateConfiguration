@@ -26,10 +26,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Folder Include="PowerSchellInPractice\" />
     <Folder Include="PSMonthOfLaunches\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ObjectAndObjectTypes.ps1" />
+    <Compile Include="PowerSchellInPractice\Start.ps1" />
     <Compile Include="PSMonthOfLaunches\AddingCommands.ps1" />
     <Compile Include="PSMonthOfLaunches\ConnectingCommands.ps1" />
     <Compile Include="PSMonthOfLaunches\HelpSystem.ps1" />
