@@ -30,8 +30,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ObjectAndObjectTypes.ps1" />
+    <Compile Include="PSMonthOfLaunches\AddingCommands.ps1" />
     <Compile Include="PSMonthOfLaunches\ConnectingCommands.ps1" />
     <Compile Include="PSMonthOfLaunches\HelpSystem.ps1" />
+    <Compile Include="PSMonthOfLaunches\Objects.ps1" />
+    <Compile Include="PSMonthOfLaunches\Pipeline.ps1" />
+    <Compile Include="PSMonthOfLaunches\Filtering.ps1" />
     <Compile Include="Script.ps1" />
     <Compile Include="TheObjectPipline.ps1" />
   </ItemGroup>
