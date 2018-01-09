@@ -76,14 +76,34 @@ $proc=Get-Process
 
 #Listing 2.9 Creating test folders and files with loops
 
-$data = 1..57
-$j = 1
-while ($j -le 10){
-$foldername = "Testfolder_$j"
-New-Item -ItemType directory -Name $foldername
-$j++
-for ($i=0; $i -le 10; $i++){
-$filename = "file_$i.txt"
-	Set-Content -Path "$foldername\$filename" -Value $data
-}
-}
+#$data = 1..57
+#$j = 1
+#while ($j -le 10){
+#$foldername = "Testfolder_$j"
+#New-Item -ItemType directory -Name $foldername
+#$j++
+#for ($i=0; $i -le 10; $i++){
+#$filename = "file_$i.txt"
+#	Set-Content -Path "$foldername\$filename" -Value $data
+#}
+#}
+
+
+#Get-WmiObject -Class Win32_OperatingSystem | Format-List
+
+#[enum]::GetNames([System.Diagnostics.EventLogEntryType])
+
+#function Write-EventLog
+#{
+#param([string]$msg="Default Message", [string]$type="Information")
+#$log = New-Object System.Diagnostics.EventLog
+#$log.set_log("Scripts")
+#$log.set_source("PSscripts")
+#$log.WriteEntry($msg,$type)
+#}
+
+
+#Write-EventLog -msg "Darek" -type "Information"
+
+
+[appdomain]::CurrentDomain.GetAssemblies() |Sort-Object -Property Fullname | Format-Table fullname
