@@ -26,12 +26,19 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Folder Include="Excel\" />
     <Folder Include="PowerSchellInPractice\" />
+    <Folder Include="PowerSchellInPractice\files\" />
     <Folder Include="PSMonthOfLaunches\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Excel\Excel1.ps1" />
     <Compile Include="ObjectAndObjectTypes.ps1" />
     <Compile Include="PowerSchellInPractice\DiskInventory.ps1" />
+    <Compile Include="PowerSchellInPractice\files\names.txt" />
+    <Compile Include="PowerSchellInPractice\ForEachConstruct.ps1" />
+    <Compile Include="PowerSchellInPractice\GetOSInfo.ps1" />
+    <Compile Include="PowerSchellInPractice\RebootWork.ps1" />
     <Compile Include="PowerSchellInPractice\ServerInfo.ps1" />
     <Compile Include="PowerSchellInPractice\Start.ps1" />
     <Compile Include="PSMonthOfLaunches\AddingCommands.ps1" />
