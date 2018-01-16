@@ -106,4 +106,119 @@ $proc=Get-Process
 #Write-EventLog -msg "Darek" -type "Information"
 
 
-[appdomain]::CurrentDomain.GetAssemblies() |Sort-Object -Property Fullname | Format-Table fullname
+#[appdomain]::CurrentDomain.GetAssemblies() |Sort-Object -Property Fullname | Format-Table fullname
+
+#function get-rsblog {
+#$ie = New-Object -ComObject InternetExplorer.Application
+#$ie.Navigate("http://richardsiddaway.spaces.live.com/")
+#while ($ie.busy) { Start-Sleep -seconds 1 }
+#$ie.Visible = $true
+#}
+
+#get-rsblog
+
+#Get-WMIObject –list
+
+#$c = [WMIClass]'Win32_Process'
+#$c.Create("Notepad.exe")
+#$x = New-Object -TypeName System.Management.ManagementClass -ArgumentList "Win32_Process"
+#$x | Get-Member
+#$x.Create("notepad.exe")
+
+#Get-Process | Sort-Object CPU -Descending | Select -First 4 |
+#Format-Table Name, @{Label="CPU(Min)"; Expression={$_.CPU/60}} -AutoSize
+
+#$HardDisk = 3
+#Get-WmiObject -Class Win32_LogicalDisk `
+#-Filter "DriveType = $HardDisk" |
+#Format-Table DeviceId, @{Label="Freespace(GB)";
+#Expression={($_.FreeSpace/1GB).ToString("F04")}} -auto
+
+
+#$HardDisk = 3
+#Get-WmiObject -Class Win32_LogicalDisk `
+#-Filter "DriveType = $HardDisk" |
+#Select DeviceId, @{Name="Freespace(GB)";
+#Expression={($_.FreeSpace/1GB).ToString("F04")}}
+
+
+#$computer = Get-WmiObject -CompterName pcrs2 -Class Win32_OperatingSystem
+
+#$a = New-Object –ComObject Shell.Application
+#Get-ChildItem $a.Namespace(0x21).Self.Path |
+#Sort LastWriteTime -Descending
+
+$xl= New-Object -ComObject "Excel.Application"
+#$xl.visible= $true
+#$xlbooks =$xl.workbooks.Add()
+
+#$word = New-Object -ComObject "Word.application"
+#$word.visible = $true
+#$doc = $word.Documents.Add()
+#$doc.Activate()
+#$word.Selection.Font.Name = "Cambria"
+#$word.Selection.Font.Size = "20"
+#$word.Selection.TypeText("PowerShell")
+#$word.Selection.TypeParagraph()
+#$word.Selection.Font.Name = "Calibri"
+#$word.Selection.Font.Size = "12"
+#$word.Selection.TypeText("The best scripting language in the world!")
+#$word.Selection.TypeParagraph()
+#$file = "c:\scripts\office\test.doc"
+#$doc.SaveAs([REF]$file)
+#$Word.Quit()
+
+
+$testhome = "d:\powerschell"
+#****************Listing  CreateNew Folder***********************************************
+#New-Item -Name TestFolder -Path d:\powershell -ItemType Directory
+#Listing 8.6 Creating files
+#New-Item -Name testfile.txt -Path d:\powerschell -ItemType File -Value "This is a one line file"
+
+#Get-Service | Out-File -FilePath d:\powerschell\sp.txt
+#Get-Process | Out-File -FilePath d:\powerschell\sp.txt -Append
+#Get-Process |
+#Export-Csv -Path d:\powerschell\testprc.csv -NoTypeInformation
+
+##
+## Listing 8.8 Reading files
+#Import-Csv -Path d:\powerschell\testprc.csv |Select Name, PeakPagedMemorySize, PeakWorkingSet,PeakVirtualMemorySize | Format-Table -AutoSize
+#$result= Select-String -Path $pshome\*.txt -Pattern "sp" -SimpleMatch
+ #Get-ChildItem -Path $testhome "*.txt" -Recurse
+
+
+###
+### Listing 8.16 Copy event logs
+###
+
+#$events=get-eventlog security|Select {$_.Message}
+#$x=0
+
+###
+### Listing 8.17 Administring IIS throught WMI
+####
+#Get-WmiObject -Namespace 'root\webadministration' -List
+
+#[system.reflection.assembly]::loadfrom("c:\windows\system32\inetsrv\`microsoft.web.administration.dll")
+#$server = New-Object microsoft.web.administration.servermanager
+#$server.Sites.Add(
+#"TestNet", "http", "*:80:testnet.manticore.org", "c:\inetpub\testnet")
+#$server.CommitChanges()
+
+
+#function get-uptime{
+#param([string] $name="")
+#	Write-Host "Uptime for $name"
+#}
+
+#get-uptime "dc"
+
+#Get-WmiObject -class Win32_LogicalDisk -computername localhost -filter "drivetype=3" 
+
+param (
+$computername = 'localhost'
+)
+Get-WmiObject -class Win32_LogicalDisk -computername $computername `
+-filter "drivetype=3" |
+Sort-Object -property DeviceID |
+Format-Table -property DeviceID,@{l='FreeSpace(MB)';e={$_.FreeSpace / 1MB -as [int]}},@{l='Size(GB';e={$_.Size / 1GB -as [int]}},@{l='%Free';e={$_.FreeSpace / $_.Size * 100 -as [int]}}

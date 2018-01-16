@@ -31,6 +31,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ObjectAndObjectTypes.ps1" />
+    <Compile Include="PowerSchellInPractice\DiskInventory.ps1" />
     <Compile Include="PowerSchellInPractice\Start.ps1" />
     <Compile Include="PSMonthOfLaunches\AddingCommands.ps1" />
     <Compile Include="PSMonthOfLaunches\ConnectingCommands.ps1" />
