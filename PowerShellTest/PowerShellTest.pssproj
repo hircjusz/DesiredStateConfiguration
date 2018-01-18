@@ -27,9 +27,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="Excel\" />
+    <Folder Include="IIS\" />
+    <Folder Include="SQLServer\" />
     <Folder Include="PowerSchellInPractice\" />
     <Folder Include="PowerSchellInPractice\files\" />
     <Folder Include="PSMonthOfLaunches\" />
+    <Folder Include="SQLServer\NewFolder1\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Excel\Excel1.ps1" />
@@ -49,6 +52,19 @@
     <Compile Include="PSMonthOfLaunches\Pipeline.ps1" />
     <Compile Include="PSMonthOfLaunches\Filtering.ps1" />
     <Compile Include="Script.ps1" />
+    <Compile Include="SQLServer\BackUpDatabase.ps1" />
+    <Compile Include="SQLServer\CreateTable.ps1" />
+    <Compile Include="SQLServer\InsertData.ps1" />
+    <Compile Include="SQLServer\Invoke-Sql.ps1" />
+    <Compile Include="SQLServer\ReadingData.ps1" />
+    <Compile Include="SQLServer\SQLCreateDb.ps1" />
+    <Compile Include="SQLServer\SQLDropDb.ps1" />
+    <Compile Include="SQLServer\SQLFindDb.ps1" />
+    <Compile Include="SQLServer\SQLHealth.ps1" />
+    <Compile Include="SQLServer\SQLServerConfiguration.ps1" />
+    <Compile Include="SQLServer\SQLSmoAssemblies.ps1" />
+    <Compile Include="SQLServer\SQLVersion.ps1" />
+    <Compile Include="SQLServer\UpdateData.ps1" />
     <Compile Include="TheObjectPipline.ps1" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
