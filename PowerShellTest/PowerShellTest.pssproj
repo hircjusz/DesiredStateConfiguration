@@ -28,6 +28,13 @@
   <ItemGroup>
     <Folder Include="Excel\" />
     <Folder Include="IIS\" />
+    <Folder Include="PluralSight\" />
+    <Folder Include="PluralSight\ToolsMakingFundamentals\" />
+    <Folder Include="PluralSight\ToolsMakingFundamentals\ActiveDirectory\" />
+    <Folder Include="PluralSight\ToolsMakingFundamentals\Logs\" />
+    <Folder Include="PluralSight\ToolsMakingFundamentals\Acls\" />
+    <Folder Include="PluralSight\ToolsMakingFundamentals\Debugging\" />
+    <Folder Include="PluralSight\ToolsMakingFundamentals\Modules\" />
     <Folder Include="SQLServer\" />
     <Folder Include="PowerSchellInPractice\" />
     <Folder Include="PowerSchellInPractice\files\" />
@@ -37,6 +44,38 @@
   <ItemGroup>
     <Compile Include="Excel\Excel1.ps1" />
     <Compile Include="ObjectAndObjectTypes.ps1" />
+    <Compile Include="PluralSight\ToolsMakingFundamentals\Acls\Archive-File.ps1" />
+    <Compile Include="PluralSight\ToolsMakingFundamentals\Acls\FileFolderAutomator.ps1" />
+    <Compile Include="PluralSight\ToolsMakingFundamentals\Acls\Get-MyAcl.ps1" />
+    <Compile Include="PluralSight\ToolsMakingFundamentals\Acls\Get-MyFile.ps1" />
+    <Compile Include="PluralSight\ToolsMakingFundamentals\Acls\Remove-MyAcl.ps1" />
+    <Compile Include="PluralSight\ToolsMakingFundamentals\Acls\Set-MyAcl.ps1" />
+    <Compile Include="PluralSight\ToolsMakingFundamentals\Acls\ToolSetExample.ps1" />
+    <Compile Include="PluralSight\ToolsMakingFundamentals\ActiveDirectory\AdAccountManagementAutomator.ps1" />
+    <Compile Include="PluralSight\ToolsMakingFundamentals\ActiveDirectory\AdvancedFunctionShell.ps1" />
+    <Compile Include="PluralSight\ToolsMakingFundamentals\ActiveDirectory\CsvImportExample.ps1" />
+    <Compile Include="PluralSight\ToolsMakingFundamentals\ActiveDirectory\New-EmployeeOnboardComputer.ps1" />
+    <Compile Include="PluralSight\ToolsMakingFundamentals\ActiveDirectory\New-EmployeeOnboardUser.ps1" />
+    <Compile Include="PluralSight\ToolsMakingFundamentals\ActiveDirectory\Set-MyAdComputer.ps1" />
+    <Compile Include="PluralSight\ToolsMakingFundamentals\ActiveDirectory\Set-MyAdUser.ps1" />
+    <Compile Include="PluralSight\ToolsMakingFundamentals\ActiveDirectory\Set-MyAdUserPassword.TempPoint.ps1" />
+    <Compile Include="PluralSight\ToolsMakingFundamentals\Debugging\Creating Breakpoints.ps1" />
+    <Compile Include="PluralSight\ToolsMakingFundamentals\Debugging\Creating Breakpoints.TempPoint.ps1" />
+    <Compile Include="PluralSight\ToolsMakingFundamentals\Debugging\Home Folder Creation.ps1" />
+    <Compile Include="PluralSight\ToolsMakingFundamentals\Debugging\Home Folder Creation.TempPoint.ps1" />
+    <Compile Include="PluralSight\ToolsMakingFundamentals\Debugging\Keeping Parameters Organized.TempPoint.ps1" />
+    <Compile Include="PluralSight\ToolsMakingFundamentals\Debugging\Parameter Typos.ps1" />
+    <Compile Include="PluralSight\ToolsMakingFundamentals\Debugging\Parameter Typos.TempPoint.ps1" />
+    <Compile Include="PluralSight\ToolsMakingFundamentals\Debugging\SampleBreakpointScript.ps1" />
+    <Compile Include="PluralSight\ToolsMakingFundamentals\Debugging\SampleBreakpointScript.TempPoint.ps1" />
+    <Compile Include="PluralSight\ToolsMakingFundamentals\Debugging\Unexpected Output.ps1" />
+    <Compile Include="PluralSight\ToolsMakingFundamentals\Debugging\Unexpected Output.TempPoint.ps1" />
+    <Compile Include="PluralSight\ToolsMakingFundamentals\Logs\Get-InterestingEventsWithinTimeframe.ps1" />
+    <Compile Include="PluralSight\ToolsMakingFundamentals\Logs\Get-TextLogEventWithin.ps1" />
+    <Compile Include="PluralSight\ToolsMakingFundamentals\Logs\Get-WinEventWithin.ps1" />
+    <Compile Include="PluralSight\ToolsMakingFundamentals\Logs\LogInvestigator.ps1" />
+    <Compile Include="PluralSight\ToolsMakingFundamentals\Modules\AdAccountManagementAutomator.psm1" />
+    <Compile Include="PluralSight\ToolsMakingFundamentals\Modules\NewModuleManifestSyntax.ps1" />
     <Compile Include="PowerSchellInPractice\DiskInventory.ps1" />
     <Compile Include="PowerSchellInPractice\files\names.txt" />
     <Compile Include="PowerSchellInPractice\ForEachConstruct.ps1" />
@@ -66,6 +105,9 @@
     <Compile Include="SQLServer\SQLVersion.ps1" />
     <Compile Include="SQLServer\UpdateData.ps1" />
     <Compile Include="TheObjectPipline.ps1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PluralSight\ToolsMakingFundamentals\Debugging\Employees.csv" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Target Name="Build" />
