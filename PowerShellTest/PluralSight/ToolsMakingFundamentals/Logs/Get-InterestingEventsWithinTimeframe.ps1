@@ -26,7 +26,7 @@ param (
     [string]$LogFileExtension = 'log'
 )
 begin {
-    . C:\LogInvestigator.ps1
+    . LogInvestigator.ps1
 }
 process {
 	try {
